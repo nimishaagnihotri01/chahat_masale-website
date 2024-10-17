@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link to your custom style.css -->
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #bca656;
+        }
+
+        .container1 form {
+            width: 500px;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        form .row {
+            display: flex;
+        }
+
+        .column .title {
+            font-size: 20px;
+            color: black;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .column .input-box {
+            margin: 5px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 5px 15px;
+            border: 1px solid black;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        form .btn2 {
+            width: 100%;
+            padding: 12px;
+            background: rgb(138, 14, 5);
+            color: beige;
+            font-weight: bold;
+            font-size: 17px;
+            margin-top: 5px;
+        }
+
+        .btn2:hover {
+            background-color: rgb(82, 12, 7);
+            transition: 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo.png" alt="logo" style="height: 50px; width: 80px;">
+            </a>
+
+            <div class="collapse navbar-collapse mx-auto" id="navbarNav">
+                <ul class="navbar-nav ms-2">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="payment.html">Checkout</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reach.html">Reach Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blogs</a></li>
+                </ul>
+                <form class="d-flex ms-auto d-none d-lg-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <!-- Sign Up / Login Buttons -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light me-2" href="login.html">Login / Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container1">
+        <form id="paymentForm" onsubmit="return validateForm()">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Payment</h3>
+                    <div class="input-box">
+                        <span>Card Accepted</span>
+                        <input type="text" id="cardAccepted" name="cardAccepted" placeholder="Name Here">
+                    </div>
+                    <div class="input-box">
+                        <span>Name on Card</span>
+                        <input type="text" id="nameOnCard" name="nameOnCard" placeholder="Your Name">
+                    </div>
+                    <div class="input-box">
+                        <span>Credit Card Number</span>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="xxxxxxxxxx">
+                    </div>
+                    <div class="input-box">
+                        <span>Exp. Month</span>
+                        <input type="text" id="expMonth" name="expMonth" placeholder="August">
+                    </div>
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Exp. Year</span>
+                            <input type="text" id="expYear" name="expYear" placeholder="2025">
+                        </div>
+                        <div class="input-box">
+                            <span>CVV</span>
+                            <input type="text" id="cvv" name="cvv" placeholder="XXX">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn2">PAY</button>
+        </form>
+    </div>
+      <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-left">
+          <div class="row text-center text-md-left">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">company name</h5>
+              <p>At chahat masale, we are passionate about bringing the world’s finest flavors to your kitchen. With a commitment to quality, authenticity, and sustainability, we carefully source premium spices from across the globe. Our mission is simple: to provide home cooks and chefs with the freshest, most vibrant spices to elevate every dish.</p>
+            </div>
+            <div class="cl-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold text-warning">products</h5>
+              <p>
+                <a href="#" class="text-white" style="text-decoration: none;">TheProviders</a>
+              </p>
+              <p>
+                <a href="#" class="text-white" style="text-decoration: none;">creativity</a>
+              </p>
+              <p>
+                <a href="#" class="text-white" style="text-decoration: none;">SourceFiles</a>
+              </p>
+              <p>
+                <a href="#" class="text-white" style="text-decoration: none;">bootstrap5</a>
+              </p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">useful links</h5>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;">your account</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;">become an affiliate</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;">Shipping rates</a>
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none;">help</a>
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contacts</h5>
+                  <p>
+                    <i class="fas fa-home mr-3"></i> india,bihar 802101, town
+                  </p>
+                  <p>
+                    <i class="fas fa-envelope mr-3"></i> xyz@gmail.com
+                  </p>
+                  <p>
+                    <i class="fas fa-phone mr-3"></i> +92 3178787666
+                  </p>
+                  <p>
+                    <i class="fas fa-print mr-3"></i> +01 7634526543
+                  </p>
+            </div>
+          </div>
+          <hr class="mb-4">
+          <div class="row align-items-center">
+              <div class="col-md-7 col-lg-8">
+                  <p>Copyright 02020 All rights reserved by:
+                    <a href="#" style="text-decoration:none;">
+                      <strong class="text-warning">The Providers</strong>
+                    </a>
+                  </p>
+              </div>
+              <div class="col-md-5 col-lg-4">
+                  <div class="text-center text-md-right">
+                      <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                          <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px"><i class="fab fa-google-plus"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="btn-floating btn-sm text-white" style="font-size:23px"><i class="fab fa-youtube"></i></a>
+                        </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function validateForm() {
+          const cardNumber = document.getElementById("cardNumber").value;
+          const expMonth = document.getElementById("expMonth").value;
+          const expYear = document.getElementById("expYear").value;
+          const cvv = document.getElementById("cvv").value;
+          const nameOnCard = document.getElementById("nameOnCard").value;
+  
+          // Check if the fields are not empty
+          if (!nameOnCard || !cardNumber || !expMonth || !expYear || !cvv) {
+              alert("All fields must be filled out.");
+              return false;
+          }
+  
+          // Validate card number (basic validation)
+          const cardPattern = /^[0-9]{16}$/;
+          if (!cardPattern.test(cardNumber)) {
+              alert("Please enter a valid 16-digit credit card number.");
+              return false;
+          }
+  
+          // Validate expiration date (month and year)
+          const monthPattern = /^(0[1-9]|1[0-2])$/;
+          const yearPattern = /^[2-9][0-9]{3}$/;
+          if (!monthPattern.test(expMonth)) {
+              alert("Please enter a valid expiration month (01-12).");
+              return false;
+          }
+          if (!yearPattern.test(expYear)) {
+              alert("Please enter a valid expiration year.");
+              return false;
+          }
+  
+          // Validate CVV (3 digits)
+          const cvvPattern = /^[0-9]{3}$/;
+          if (!cvvPattern.test(cvv)) {
+              alert("Please enter a valid 3-digit CVV.");
+              return false;
+          }
+  
+          // Validate "Name on Card" (only alphabets and spaces)
+          const namePattern = /^[A-Za-z\s]+$/;
+          if (!namePattern.test(nameOnCard)) {
+              alert("Please enter a valid name on the card (only letters and spaces allowed).");
+              return false;
+          }
+  
+          return true; // All validations passed
+      }
+  </script>
+  
+</body>
+</html>

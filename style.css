@@ -1,0 +1,338 @@
+/* Custom Navbar Background Color */
+.custom-navbar {
+  background-color: rgb(138, 14, 5);
+  /* Your specified color */
+}
+
+/* Adjust the color of the navbar links */
+.custom-navbar .nav-link {
+  color: white !important;
+  /* Make navbar links white */
+}
+
+.navbar .form-control {
+  width: 500px;
+  /* Set the width of the search bar */
+  height: 35px;
+  /* Set the height of the input field */
+}
+
+.carousel-section {
+  padding-top: 1000px
+    /* Adjust this value based on your navbar height */
+}
+
+.carousel-item img {
+  max-height: 600px;
+  /* Set a max height for the carousel images */
+  object-fit: cover;
+  /* Ensure the image covers the area without stretching */
+  width: 100%;
+  /* Make the image responsive */
+}
+
+/* Position the toggler icon at the bottom-right corner on mobile */
+@media (max-width: 991px) {
+  .navbar-toggler {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1050;
+    /* Ensures the toggler stays above other content */
+  }
+
+  /* Stack Sign Up and Login buttons vertically inside the mobile navbar */
+  .collapse.navbar-collapse.d-lg-none .navbar-nav {
+    .collapse.navbar-collapse.d-lg-none .navbar-nav {
+      display: flex;
+      flex-direction: row;
+      /* Align buttons side by side */
+      justify-content: center;
+      padding: 10px;
+      background-color: rgb(138, 14, 5);
+      /* Match navbar background */
+      border-radius: 5px;
+    }
+
+    /* Optional: adds rounded corners */
+  }
+
+  /* Add some space between the Sign Up and Login buttons */
+  .collapse.navbar-collapse.d-lg-none .navbar-nav .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    /* Add space between buttons */
+  }
+
+  /* Remove bottom margin on the last button */
+  .collapse.navbar-collapse.d-lg-none .navbar-nav .btn:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Hide the mobile version of buttons on large screens */
+@media (min-width: 992px) {
+
+  /* Hide the mobile version buttons on larger screens */
+  .d-lg-none {
+    display: none;
+  }
+
+  /* Only show buttons in navbar for larger screens */
+  .d-none.d-lg-flex {
+    display: flex !important;
+  }
+
+  /* Centering navbar links on large screens */
+  .collapse.navbar-collapse.justify-content-center {
+    justify-content: center !important;
+  }
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Adds a dark overlay behind the text */
+  padding: 20px;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.featured-products-title {
+  background-color: rgb(219, 139, 20);
+  text-align: center;
+  padding: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.highlight-word {
+  color: rgb(138, 14, 5);
+  /* Change this to the desired color */
+}
+
+.btn1 {
+  height: 45px;
+  width: 35%;
+  border: none;
+  outline: none;
+  background-color: rgb(138, 14, 5);
+  color: white;
+  font-weight: 700;
+  border-radius: 60px;
+}
+
+.btn1:hover {
+  background-color: rgb(82, 12, 7);
+  transition: 0.4s;
+}
+
+.card:hover {
+  -webkit-box-shadow: -1px 3px 31px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: -1px 3px 31px -5px rgba(0, 0, 0, 0.6);
+  box-shadow: -1px 3px 31px -5px rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}
+
+.about-1 {
+  margin-top: 5%;
+  padding: 5px;
+}
+
+.about-1 h1 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.about-1 p {
+  text-align: center;
+  padding: 3px;
+  color: black;
+}
+
+.about-item {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color:beige;
+  padding: 80px, 30px;
+  box-shadow: 0 0 9px rgba(0, 0, 0.6);
+}
+
+.about-item i {
+  font-size: 43px;
+  margin-top: 10px;
+}
+
+.about-item h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.about-item p {
+  margin-top: 10px;
+  padding-bottom: 12px;
+}
+
+.about-item:hover {
+  background-color: #b4705f;
+}
+
+.about-item:hover i {
+  transform: translateY(-10px);
+}
+
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover hr {
+  transition: all 400ms ease-in-out
+}
+
+.first_col {
+  background-color: white;
+  height: 550px;
+  position: relative;
+  width: 550px;
+  left: 170px;
+  top: 270px;
+  border-radius: 20px;
+}
+
+.img-fluid {
+  border-radius: 20px;
+}
+.last_row {
+  position: relative;
+  left: 500px;
+  top: 170px;
+  height: 190px;
+  width: 68%;
+  padding-bottom: 200px;
+  background-color: rgb(195, 136, 19);
+  border-radius: 20px;
+}
+
+.btn-primary {
+  background-color: rgb(195, 136, 19);
+  border: rgb(195, 136, 19);
+}
+
+.btn-primary:hover {
+  background-color: rgb(128, 87, 4);
+}
+
+.form-control {
+  height: 52px;
+  font-size: 14px;
+  border-radius: 2px;
+  box-shadow: none;
+  border: 1px solid black;
+  background-color: antiquewhite;
+}
+
+.form-control[type=text]:focus {
+  border: 2px solid black;
+}
+
+.col {
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width:800px) {
+  .first_col {
+    position: initial;
+    left: 0;
+  }
+
+  .last_row {
+    left: 0;
+    width: 100%;
+    height: 480px;
+    top: 0;
+
+  }
+}
+.products .heading{
+  text-align: center;
+  font-weight: bolder;
+}
+.products .heading span{
+  color:rgb(195, 136, 19);
+}
+.products .box-container{
+  display: flex;
+  flex-wrap:wrap;
+  gap:1.5rem;
+}
+.products .box-container .box{
+  flex:1 1 20rem;
+  border-radius: .5rem;
+  border: .1rem solid black;
+  position:relative;
+  background-color: white;
+}
+.products .box-container .box .discount{
+  position: absolute;
+  top:1rem; left:1rem;
+  padding: .7rem 1rem;
+  color:var(--pink);
+  background:rgba(209, 25, 117, 0.05);
+  z-index: 1;
+  border-radius:.5rem;
+}
+.products .box-container .box .image{
+  position: relative;
+  text-align:center;
+  padding-top:2rem;
+  padding-bottom: 5rem;
+  overflow:hidden;
+}
+.products .box-container .box .image img{
+  height:20rem;
+}
+.products .box-container .box:hover{
+  -webkit-box-shadow: -1px 3px 31px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: -1px 3px 31px -5px rgba(0, 0, 0, 0.6);
+  box-shadow: -1px 3px 31px -5px rgba(0, 0, 0, 0.6);
+  transition: 0.2s;
+}
+.products .box-container .box .image .icons{
+  position:absolute;
+  bottom:1rem; left:0;right:0;
+  display: flex;
+}
+.products .box-container .box .image .icons a{
+  height:1.2rem;
+  padding-bottom:45px;
+  line-height:3rem;
+  font-size:1.3rem;
+  width:50%;
+  background-color: rgb(195, 136, 19);
+  color:aliceblue
+}
+.products .box-container .box .image .icons .cart-btn{
+  border-left:.1rem solid rgb(100, 73, 7);
+  border-right:.1rem solid rgb(100, 73, 7);
+  width:100%;
+}
+.products .box-container .box .image .icons a:hover{
+  background: black;
+}
+.products .box-container .box .content{
+  padding:1px;
+  text-align: center;
+}
+.products .box-container .box .content h3{
+  font-size: 1.9rem;
+  color:rgb(138, 14, 5);
+  font-weight: bolder;
+}
+.products .box-container .box .content .price span{
+  font-size: 1.2rem;
+  color:rgb(138, 14, 5);
+  font-weight: lighter;
+}
+#products{
+  background-color: antiquewhite;
+}
